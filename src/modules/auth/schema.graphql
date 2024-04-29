@@ -1,0 +1,29 @@
+
+type Mutation {
+    register(user:UserInput!): Response!,
+    login(user: LoginUserInput): Response!
+}
+type Response {
+    status: Int!,
+    message: String!
+    data: User,
+    accessToken: String
+}
+input LoginUserInput {
+    email: Email!,
+    password: Password!
+}
+input UserInput {
+    name: String!,
+    lastname: String!,
+    email: Email!,
+    password: Password!
+    gender: Gender!
+}
+type User {
+    name: String!,
+    lastname: String!,
+    email: Email!,
+    password: Password!
+    gender: Gender!
+}

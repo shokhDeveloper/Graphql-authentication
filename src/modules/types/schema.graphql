@@ -1,0 +1,11 @@
+type Query {
+    user: String
+}
+
+scalar Password
+scalar Email
+
+enum Gender {
+    male
+    female
+}
